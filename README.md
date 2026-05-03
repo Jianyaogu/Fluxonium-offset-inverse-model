@@ -30,11 +30,7 @@ pip install -r requirements.txt
 Install CQEDToolbox:
 
 pip install -e path/to/CQEDToolbox
-
-If needed in notebook:
-
-import sys
-sys.path.append("path/to/CQEDToolbox/src")
+"https://github.com/toolsforexperiments/CQEDToolbox/tree/main/src/cqedtoolbox"
 
 ---
 
