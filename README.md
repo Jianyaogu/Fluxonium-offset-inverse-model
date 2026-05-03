@@ -34,14 +34,6 @@ pip install -e path/to/CQEDToolbox
 
 ---
 
-## Project Structure
-
-ML model/
-├── ML for resonator spectrum vs flux.ipynb
-└── Generating experimental data for ML offset learning.ipynb
-
----
-
 ## Workflow
 
 ### 1. Train ML model (before experiment)
