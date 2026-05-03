@@ -36,7 +36,7 @@ pip install -e path/to/CQEDToolbox
 
 ## Workflow
 
-### 1. Train ML model (before experiment)
+### 1. Train ML model (before experiment/during cooling process)
 
 Run:
 
