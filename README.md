@@ -40,12 +40,17 @@ pip install -e path/to/CQEDToolbox
 
 Run:
 
-ML model/ML for resonator spectrum vs flux.ipynb
+ML for resonator spectrum vs flux.ipynb till the generating theoretical data and training model step
 
 This step:
 
-* generates synthetic dataset
+* generates synthetic dataset base on guessed params
 * trains 1D CNN
+* save the model to the path you need
+
+Output:
+
+fluxonium_inverse_cnn_better.pt
 
 ---
 
@@ -61,14 +66,14 @@ Measure:
 
 Run:
 
-ML model/Generating experimental data for ML offset learning.ipynb
+Generating experimental data for ML offset learning.ipynb (except the last cell)
 
 This step:
 
 * fits resonator frequency vs flux
 * filters noisy points
-* automatically selects one flux period
-* resamples to fixed grid (121 points)
+* automatically (or by hand) selects one flux period
+* resamples to fixed grid (121 points or same as the points in a flux period used for training model)
 
 Output:
 
@@ -78,7 +83,7 @@ exp_res_spec_period_for_cnn_test.npz
 
 ### 4. Run ML prediction
 
-pred = predict_single_curve(fr_resampled, model_path)
+Continue running the ML for resonator spectrum vs flux.ipynb to get fitted data from the model you saved
 
 ---
 
@@ -89,13 +94,13 @@ offset_fraction ∈ [0, 1]
 Important:
 
 * This is the ONLY reliable output
-* Other parameters (EC, EL, EJ, g) are not uniquely determined
+* Other parameters (EC, EL, EJ, g) are not uniquely determined, so might not be correct
 
 ---
 
 ### 6. Convert to physical flux
 
-Using offset:
+Using offset run the last cell of Generating experimental data for ML offset learning.ipynb
 
 * determine zero flux point
 * determine half flux point
@@ -104,9 +109,8 @@ Using offset:
 
 ## Notes
 
-* Input must be exactly one flux period
+* Input must be roughly ~1 flux period (for auto period picking, it would be best to have >2 flux periods)
 * Automatic period detection uses:
-
   * autocorrelation (period estimation)
   * sliding window scoring (best segment selection)
 * Model is designed for offset extraction, not full parameter recovery
