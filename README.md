@@ -30,7 +30,7 @@ pip install -r requirements.txt
 Install CQEDToolbox:
 
 pip install -e path/to/CQEDToolbox
-"https://github.com/toolsforexperiments/CQEDToolbox/tree/main/src/cqedtoolbox"
+"[https://github.com/toolsforexperiments/CQEDToolbox/tree/main/src/cqedtoolbox](https://github.com/Jianyaogu/CQEDToolbox/blob/Power-rabi-method-changing/src/cqedtoolbox/protocols/operations/fluxonium)"
 
 ---
 
