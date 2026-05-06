@@ -126,4 +126,4 @@ flux offset → experimental calibration
 ---
 
 ## License
-MIT. See LICENSE for details.
+MIT. See [LICENSE](https://github.com/Jianyaogu/Fluxonium-offset-inverse-model/blob/main/LICENSE) for details.
